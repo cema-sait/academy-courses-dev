@@ -1,5 +1,6 @@
 ---
 name: Building Your Own Images
+dependsOn: [docker_containerization.introduction_to_docker.02_basic_docker_operations]
 tags: [docker, dockerfile, images, containerization]
 learningOutcomes:
     - Understand Dockerfile instructions

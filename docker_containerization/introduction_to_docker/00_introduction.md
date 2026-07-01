@@ -1,6 +1,6 @@
 ---
 name: Introduction
-dependsOn: []
+dependsOn: [docker_containerization.introduction_to_docker]
 tags: [docker, docker-compose, containerization]
 learningOutcomes:
   - Understand Docker fundamentals

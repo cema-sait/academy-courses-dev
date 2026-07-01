@@ -1,5 +1,6 @@
 ---
 name: Appendix and Further Resources
+dependsOn: [docker_containerization.introduction_to_docker.05_multi-container_apps_with_docker_compose]
 tags: [docker, containerization, kubernetes, podman, resources]
 learningOutcomes:
 - Understand key containerisation terminology

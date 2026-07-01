@@ -1,16 +1,11 @@
 ---
-learningOutcomes:
-- Understand why containerisation is useful and how it differs from
-  virtual machines
-- Understand core Docker concepts including images, containers,
-  runtimes, registries, and layers
-- Run and inspect Docker containers using basic CLI commands
 name: Foundations & Mental Models
-tags:
-- docker
-- docker-compose
-- containerization
-- containers
+dependsOn: [docker_containerization.introduction_to_docker.00_introduction]
+tags: [docker, docker-compose, containerization, containers]
+learningOutcomes:
+  - Understand why containerisation is useful and how it differs from virtual machines
+  - Understand core Docker concepts including images, containers, runtimes, registries and layers
+  - Run and inspect Docker containers using basic CLI commands
 ---
 
 # Foundations & Mental Models
@@ -145,7 +140,7 @@ Run the Docker hello-world image:
 docker run hello-world
 ```
 
-::: solution
+:::solution
 Docker performs the following steps:
 
 1.  Checks whether the image exists locally.
@@ -162,8 +157,7 @@ message and finishes.
 
 ## Running an interactive container
 
-::::challenge{id=docker_alpine_shell title="Start an interactive Alpine
-container"}
+::::challenge{id=docker_alpine_shell title="Start an interactive Alpine container"}
 
 Run an Alpine Linux container:
 
@@ -185,7 +179,7 @@ Exit:
 exit
 ```
 
-::: solution
+:::solution
 The `-it` flags provide an interactive terminal:
 
 -   `-i` keeps stdin open.
@@ -224,7 +218,7 @@ Remove the container:
 docker rm -f test-nginx
 ```
 
-::: solution
+:::solution
 `docker inspect` returns detailed JSON information about the container.
 
 Important areas to explore:

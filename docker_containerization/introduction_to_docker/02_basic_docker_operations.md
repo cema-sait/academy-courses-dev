@@ -1,5 +1,6 @@
 ---
 name: Basic Docker Operations
+dependsOn: [docker_containerization.introduction_to_docker.01_foundations_and_mental_models]
 tags: [docker, docker-compose, containerization, containers]
 learningOutcomes:
     - Verify a Docker or Podman installation
@@ -76,6 +77,8 @@ docker history <image>
 
 ## Hands-on exercise
 
+::::challenge{id=docker_nginx_lifecycle title="Run and inspect an NGINX container"}
+
 Run an NGINX web server:
 
 ``` bash
@@ -97,3 +100,15 @@ Clean up:
 ``` bash
 docker rm -f <container>
 ```
+
+:::solution
+You should verify three outcomes:
+
+1. The container is reachable at `http://localhost:8080`.
+2. `docker logs <container>` shows NGINX startup and request logs.
+3. `docker rm -f <container>` removes the container cleanly.
+
+You can discover the container id or name using `docker ps`.
+:::
+
+::::

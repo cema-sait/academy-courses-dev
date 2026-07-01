@@ -1,5 +1,6 @@
 ---
 name: Multi-container Apps with Docker Compose
+dependsOn: [docker_containerization.introduction_to_docker.04_service_delivery_and_production_considerations]
 tags: [docker, docker-compose, orchestration, containers]
 learningOutcomes:
   - Understand Docker Compose fundamentals
@@ -69,5 +70,20 @@ docker compose down -v
 
 ## Hands-on exercise
 
+::::challenge{id=docker_compose_multiservice title="Create and run a multi-service compose stack"}
+
 Create your own `compose.yml` file for an application with multiple
 services.
+
+:::solution
+A minimal successful outcome includes:
+
+1. A `compose.yml` file with at least two services.
+2. `docker compose up -d` starts all services.
+3. `docker compose ps` shows services as running.
+4. `docker compose down -v` tears down containers and volumes.
+
+If one service depends on another, define `depends_on` to express startup order.
+:::
+
+::::
